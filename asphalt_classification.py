@@ -13,12 +13,11 @@ X_test, y_test = load_UCR_UEA_dataset(name='AsphaltPavementType', split='test')
 
 # plot train and test labels distribution
 _, ax = plt.subplots(1, 2)
-labels, counts = np.unique(y_train, return_counts=True)
-ax[0].bar(labels, height=counts)
+for i, dat in enumerate([y_train, y_test]):
+    labels, counts = np.unique(dat, return_counts=True)
+    ax[i].bar(labels, height=counts)
+    
 ax[0].set_title('train')
-
-labels, counts = np.unique(y_test, return_counts=True)
-ax[1].bar(labels, height=counts)
 ax[1].set_title('test')
 plt.savefig('class_distribution.png', dpi=300)
 
