@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
 import sktime
 from sktime.datasets import load_UCR_UEA_dataset
 from sktime.transformations.panel.rocket import MiniRocketMultivariateVariable
